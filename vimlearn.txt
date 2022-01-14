@@ -1,0 +1,336 @@
+
+Navigation: - normal
+    k - up
+    j  - down
+    h - left
+    l  - right 
+Bigger navigation 
+
+    gg - top of the document 
+    G - bottom of the document
+    ‘’ - where i was second ago 
+    25% - put you in the 25% place in the file 
+    50% - for 50% of the file 
+
+    { - jump by blocks up
+    } - jump by blocks down 
+    % - if your on ()/[]/{} jumps to the next parenthesis in your pare  
+
+    Ctrl + d - go down half a page 
+    Ctrl + u - go up half a page 
+
+
+
+View fixer: 
+zz - put your cursor line in the middle 
+zt  - top 
+zb - bottom  
+
+
+
+Jumps:
+
+    0 - start of the line 
+    $ - end line 
+    w - jump between words 
+    e - jump end of word
+    b - jump beginning word 
+    W/E/B - jumps the same but ignore punctuation and () 
+
+    Conditions
+        add ; to continue the command
+        f + char to jump = forward + char example : ft - forward char t 
+        F + char to jump = backward + char 
+        t / T same as f /F but  one char before the given char. t is for till.
+
+
+
+Modes:
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    Normal - moving in the file and copy paste
+    Insert - adding texts
+    Visual - select texts 
+    Command - run commands 
+    Replace - like insert in word documents
+    Completion - vim auto complete your writing
+
+
+
+            
+    Move between modes:
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+        esc  - normal mode
+
+        """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+        Enter to insert mode: 
+        i - insert mode to the left 
+        a - insert to the right 
+        I - the beginning of the line 
+        A - append text to the end of the line 
+
+        s - delete the current char that your on 
+        S - delete the line your on 
+        o - create a new line 
+        O - create a new line above your line and enter there 
+        """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+        Ctrl + x -> completion mode
+
+        : -> command mode 
+
+        Replace mode -> R -> like insert in word 
+
+        Visual mode - Select text:
+        """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+            v -Select by char
+            V - select by line 
+            Ctr + v - block selection:
+            
+
+            Example: 
+            vap - select around paragraph 
+        """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+        Completion mode & completion:
+            Ctrl + p -> complete from previews words 
+            Ctrl + n -> complete form next words
+            To navigate between option simply continue clicking on the command.
+
+            Context aware completion: - insert mode
+            Ctrl + x + Ctrl + ] -> complete tags
+            Ctrl + x + Ctrl + p -> complete from previews lines in this file
+            Ctrl + x + Ctrl + n -> complete from next lines in this file
+            Ctrl + x + Ctrl + f -> complete files and folders in your directory
+            Ctrl + x + Ctrl + l -> complete line from your file
+            Ctrl + x + Ctrl + o -> completion for code ***set omnifunc***
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+Registers:
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    to access a register type "[symbol] -> "a
+    copy line to register a
+    "ayy 
+    Append line to register a
+    "Ayy
+    past the register
+    "ap
+
+    Deletes:
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+        x - delete char
+        d  + number of motion +motion : 
+        commande + number of motion +motion
+        dd - delete line 
+        D/d$ - delete from the cursor to the end of the line 
+        dw - delete a word 
+        de - end
+        db - beginning 
+        d4w - delete 4 words 
+        daw  - delete around the world 
+                diw - delete inside the world 
+                    i - for inside
+                    a - for around 
+        dap - delete around paragraph 
+        di( - delete inside ()
+        da( - delete 
+        Put us in insert and delete - replace 
+        
+        c + number of motion + motion: 
+        c - delete the char we are on 
+        ce-  delete till end 
+        C/c$ - delete line
+        cw - delete word 
+        you can ci' -> and vim will automatically find the '' in the line and change it!!
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+    Yank = copy:
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+        If you already selected a chunk of text you can just press y to yank it. 
+        y+ number of motion +motion
+        yw - yank word
+        yy  - copy the  line 
+        y$ - from the cursor to the end of the line 
+        yap - copy around paragraph 
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+    Past
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+        p - past last deleted line / the last copy text 
+        r + char to replace - replace char 
+
+        Inside insert mode do Ctr + r and then a register name  
+        and it will past the text that inside this register and continue on insert mode
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    TIP: 
+
+    1. Ctrl + a gives you the last inserted text on insert mode
+
+    2. Format a code: =ip -> format(=) inside paragrph 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Exit files: 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+ZQ - force quit 
+ZZ - quit and write 
+:x! - save and quit 
+:w - save 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Vim Timeline :
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    . - redoes the last command
+    u - undo 
+    U - undo the line 
+    ctrl + r - redo 
+
+    Time travel in vim:
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    :earlier 10:m - go to the state the file was 10m ago 
+    :later 10m - go to the state the file was 10m further in the future 
+
+    ctrl + o - the last place i was 
+    ctrl + i - previous place i was 
+    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+Search text: 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+/ <text> - find the text below your current line include 
+
+n - next found 
+N - reversed next found 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+Tab multiple lines: 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Select in visual mode 
+And > for tab 
+< for untab 
+>> tab line 
+<< untab line 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+
+
+
+Commands:
+    :norm + command
+    Does the command you’re giving to him for all the selected text
+    :norm .- run the last thing you did for all the selected text
+    Like . but does it for all the selected text!
+
+    
+Splits: 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+structure:
+:[hight][sp/vs][filename or none] - 10sp
+:sp - split 
+:vs - vertucal split 
+Ctrl + w move between splits 
+Resize windows:
+ctrl + w + = - make the splits equal (=)
+ctrl + w + _ - maxed the horizontal split
+ctrl + w + | - maxed the vertical split
+ctrl + Up/Down/Left/Right
+
+Swap the two splits:
+Ctrl + w + r
+Swap the split between vertical and horizontal
+\ + th -> to horizontal
+Move between splits
+C-j/k/l/h
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+% - for all the file 
+To search and replace:
+    :s/old/new/g - replace by line 
+:%s/oldString/newString/g - replace all the file for %
+:3,9s/oldString/newString/g - replace between line 3 and 9 
+:%s/old/new/gc - replace all file and ask every replacement in the file if I want to replace it or not. 
+NOTE: add a shortcut for this kind of syntax 
+
+
+Execute terminal command from vim 
+:! <the command>
+Show vim command menu :
+: + <crtl + d>
+:w + <crtl + d> - all the commands with w at the beginning will show 
+
+:help <name> - get informations on the command after help. 
+
+How to switch esc to caps? 
+
+Copy and pasting from out of vim
+
+
+NERDtree:
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    o - open/close file 
+    go - preview
+    t - open tab and go to this tab
+    T - open tab and stay 
+    i - split
+    gi - preview split
+    s - vsplit 
+    gs - preview vsplit 
+    e - explore - on the current split create a NERDtree of the current path that your on 
+    m - menu, give a menu of commands - create a file/ delete ect. 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+:terminal - terminal mode 
+To exit terminal mode press ctrl + \ ctr + n
+Mabey create a key mapping to this in the future 
+
+
+Access the registry of ctrl v / c - “+
+To yank globally - “+y
+To paste globally - “+p
+
+S - search and replace 
+F9 - run a python file
+
+Teleportation:
+Gf - go to a file if you are on his path!
+Ctrl + o = get you back to the file you teleported from
+
+Sessions:
+Ssave - save a session
+
+Fuzzy:
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    Fuzzy search for a file:
+    Ctrl + f
+    to open:
+    enter - on the current split
+    ctrl + t - new tab
+    ctrl + v - vertical split 
+    ctrl + x - horizontal split
+
+    Reset your directory to C:
+    Ctrl + R
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Macros:
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    Record - q[the key to record] + q to save the record
+    to run the record press [number of times we want the macro to run]@[the key you recored into]
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+How to push a new project into GitHub:
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+https://docs.github.com/en/github/importing-your-projects-to-github/importing-source-code-to-github/adding-an-existing-project-to-github-using-the-command-line
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

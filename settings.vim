@@ -11,9 +11,10 @@ endif
 
 " basics
 filetype plugin indent on
-syntax on set number
-set autoread
+syntax on 
+set number
 set relativenumber
+set autoread
 set incsearch
 set ignorecase
 set smartcase
@@ -30,7 +31,7 @@ set termguicolors
 
 
 " theme
-colorscheme onedark
+colorscheme solarized8_high
 " set the current directory to be the file I'm editing
 autocmd BufEnter * silent! lcd %:p:h
 " spelling 

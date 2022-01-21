@@ -52,10 +52,4 @@ noremap <silent> <C-Down> :resize -3<CR>
 " Change 2 split windows from vert to horiz vice versa
 map <Leader>th <C-w>t<C-w>H 
 map <Leader>tk <C-w>t<C-w>K  
-" Leader is space
-:let mapleader = "\<Space>"
 """""""""""""""""""""""""""""""""""""""""""""""""
-" Open Terminal in a split
-"""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""
-

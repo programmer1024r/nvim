@@ -2,13 +2,11 @@
 nmap <C-z> <Nop> 
 
 " Copy
-vnoremap <C-y> "+y
-" Paste
-map <C-p> "+P
+vmap <C-y> :w !xclip -f -sel clip<CR><Enter>
 
-" run a python file with no input
-autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python' shellescape(@%, 1)<CR>
-autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python' shellescape(@%, 1)<CR>
+" Paste
+map <C-p> :r!xclip -o -sel clip<CR>
+
 
 " Search and replace
 nnoremap S :%s//g<Left><Left>

@@ -1,11 +1,18 @@
 call plug#begin('~/AppData/Local/nvim/plugged')
+
 	" airline
     Plug 'itchyny/lightline.vim'
+
     " fast motion on vim
     Plug 'easymotion/vim-easymotion'
 
+    " Themes
     " Solarized
     Plug 'lifepillar/vim-solarized8' 
+    " Everforest
+    Plug 'sainnhe/everforest' 
+    " gruvbox
+    Plug 'morhetz/gruvbox' 
 
     " recent file and sessions
     Plug 'mhinz/vim-startify'

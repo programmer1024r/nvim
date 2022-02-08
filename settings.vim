@@ -1,13 +1,6 @@
-" Font
-if has("gui_running")
-  if has("gui_gtk2")
-    set guifont=Inconsolata\ 14
-  elseif has("gui_macvim")
-    set guifont=Menlo\ Regular:h18
-  elseif has("gui_win32")
-    set guifont=Consolas:h16:cANSI
-  endif
-endif
+" copy and past to vim
+set pumblend=15
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 
 " basics
 filetype plugin indent on
@@ -31,16 +24,11 @@ set termguicolors
 
 
 " theme
-colorscheme solarized8_high
+colorscheme gruvbox
 " set the current directory to be the file I'm editing
 autocmd BufEnter * silent! lcd %:p:h
-" spelling 
-"set spell
 " completion dictionary
 set complete=.,w,b,u,t,i,kspell
 " Splits
 set splitbelow splitright
-" add python
-"let g:python3_host_prog='C:/Users/foo/Envs/neovim3/Scripts/python.exe'
-"let g:python_host_prog='C:/Users/foo/Envs/neovim/Scripts/python.exe'
 

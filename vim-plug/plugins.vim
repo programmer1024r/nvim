@@ -23,6 +23,7 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
+    "  auto complete
 
 
     Plug 'ThePrimeagen/vim-be-good'

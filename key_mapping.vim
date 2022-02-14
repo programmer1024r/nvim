@@ -20,6 +20,9 @@ map <C-s> :Startify<CR>
 
 " Leader is space
 let mapleader = " " " map leader to space
+" easymotion
+nmap s <Plug>(easymotion-s)
+
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
@@ -32,8 +35,6 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
-" get to the C directory
-nnoremap <C-R> :chdir \<CR>
 
 " Splits
 """""""""""""""""""""""""""""""""""""""""""""""""

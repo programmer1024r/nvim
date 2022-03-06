@@ -23,8 +23,12 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
-    "  auto complete
 
+    " Vim wiki
+    Plug 'vimwiki/vimwiki'
+
+    " Vim markdown preview
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
     Plug 'ThePrimeagen/vim-be-good'
 
